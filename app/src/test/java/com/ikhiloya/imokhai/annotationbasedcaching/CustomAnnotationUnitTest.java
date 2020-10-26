@@ -31,7 +31,7 @@ public class CustomAnnotationUnitTest {
     private static String PAYMENT_TYPES = "/payment-types";
 
     @Test(expected = Resources.NotFoundException.class)
-    public void testCoolStuffRequest() throws Exception {
+    public void testIfCustomAnnotationIsPresent() throws Exception {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor(message -> Timber.i(message));
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         NetworkInterceptor networkInterceptor = new NetworkInterceptor();
