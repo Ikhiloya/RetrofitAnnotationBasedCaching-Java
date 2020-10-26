@@ -44,11 +44,10 @@ public class CustomAnnotationUnitTest {
                             @Override
                             public Response intercept(Chain chain) throws IOException {
                                 final Request request = chain.request();
-                                // Grab the request from the chain, and test away
+                                //tes the request method
                                 assertEquals("GET", request.method());
                                 HttpUrl url = request.url();
-                                // Test First query parameter
-                                // Or, the whole url at once --
+                                // Test the url
                                 assertEquals(BASE_URL + PAYMENT_TYPES, url.toString());
 
                                 //get the RequiresCaching annotation from the request
